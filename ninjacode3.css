@@ -1,0 +1,26 @@
+.ninja1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ninja2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.ninja {
+  width: 30px;
+}
+
+.ninja3 {
+  padding-left: 1em;
+  text-indent: 1em;
+}
+
+.ninja4 {
+  padding-left: 6em;
+  text-indent: 6em;
+}
+/*# sourceMappingURL=ninjacode3.css.map */

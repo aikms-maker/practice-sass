@@ -1,0 +1,64 @@
+@mixin myAlpha($color) {
+  color: rgba($color, 0.8);
+}
+
+.red {
+  @include myAlpha(#f00);
+}
+
+.green {
+  @include myAlpha(#008000);
+}
+
+@mixin myPosition($ratio) {
+  position: absolute;
+  top: 50%;
+  transform: translateY($ratio);
+}
+
+.parent {
+  position: relative;
+}
+.children1 {
+  @include myPosition(-50%);
+}
+.children2 {
+  @include myPosition(-30%);
+}
+
+.btn {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+.btn-red {
+  //ここに1行足して期待するcssにしよう
+  @extend .btn;
+  background-color: red;
+}
+
+$prefix: ".ninja";
+#{$prefix}-red {
+  color: red;
+}
+#{$prefix}-blue {
+  color: blue;
+}
+
+.ninja {
+  &-red {
+    color: red;
+  }
+  &-blue {
+    color: blue;
+  }
+}
+
+a {
+  &:hover {
+    opacity: 0.7;
+  }
+}

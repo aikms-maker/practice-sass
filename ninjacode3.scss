@@ -1,0 +1,28 @@
+@mixin myLayout($con1, $con2) {
+  position: absolute;
+  #{$con1}: 0;
+  #{$con2}: 0;
+}
+
+.ninja1 {
+  @include myLayout("top", "left");
+}
+.ninja2 {
+  @include myLayout("bottom", "right");
+}
+
+$sizeList: 10px, 20px, 30px, 40px; //sassの配列
+.ninja {
+  width: nth($list: $sizeList, $n: 3);
+}
+
+@mixin myIndent($em) {
+  padding-left: $em;
+  text-indent: $em;
+}
+.ninja3 {
+  @include myIndent(1em);
+}
+.ninja4 {
+  @include myIndent(6em);
+}

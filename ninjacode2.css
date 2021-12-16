@@ -1,0 +1,44 @@
+/*
+$size: 100px;
+
+.ninja {
+  width: $size + 50px;
+}
+
+$size1: 60px;
+$size2: 200px;
+
+.ninja {
+  width: $size1 + $size2;
+}
+
+@mixin mySize($size: 200px) {
+  width: $size;
+}
+
+.ninja1 {
+  @include mySize();
+}
+
+.ninja2 {
+  @include mySize(500px);
+}
+
+@mixin myLayout($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.ninja {
+  @include myLayout(50px, 200px);
+}
+*/
+.ninja1 {
+  width: 50px;
+}
+
+.ninja2 {
+  width: 50px;
+  height: 20px;
+}
+/*# sourceMappingURL=ninjacode2.css.map */

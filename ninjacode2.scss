@@ -1,0 +1,48 @@
+/*
+$size: 100px;
+
+.ninja {
+  width: $size + 50px;
+}
+
+$size1: 60px;
+$size2: 200px;
+
+.ninja {
+  width: $size1 + $size2;
+}
+
+@mixin mySize($size: 200px) {
+  width: $size;
+}
+
+.ninja1 {
+  @include mySize();
+}
+
+.ninja2 {
+  @include mySize(500px);
+}
+
+@mixin myLayout($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.ninja {
+  @include myLayout(50px, 200px);
+}
+*/
+
+@mixin myLayout($width, $isHeight) {
+  width: $width;
+  @if ($isHeight) {
+    height: 20px;
+  }
+}
+.ninja1 {
+  @include myLayout(50px, false);
+}
+.ninja2 {
+  @include myLayout(50px, true);
+}
